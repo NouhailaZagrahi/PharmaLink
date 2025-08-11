@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PharmacyApp" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.PharmacyApp" parent="Base.Theme.PharmacyApp" />
+    
+    <style name="CircleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15%</item>
+    </style>
+
+    <style name="BottomNavigationViewItemStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextAppearance">@style/CustomTextAppearance</item>
+        <item name="itemIconSize">24dp</item> <!-- Adjust the icon size if needed -->
+    </style>
+
+    <style name="CustomTextAppearance" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:paddingTop">2dp</item> <!-- Adjust spacing above the text -->
+    </style>
+
+</resources>

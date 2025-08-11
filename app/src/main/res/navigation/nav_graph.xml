@@ -1,0 +1,255 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/blankFragmentSplashScreen">
+    <fragment
+        android:id="@+id/blankFragmentSplashScreen"
+        android:name="com.example.pharmacyapp.BlankFragmentSplashScreen"
+        android:label="BlankFragmentSplashScreen" >
+        <action
+            android:id="@+id/action_blankFragmentSplashScreen_to_blankFragmentDefini"
+            app:destination="@id/blankFragmentDefini" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragmentDefini"
+        android:name="com.example.pharmacyapp.BlankFragmentDefini"
+        android:label="BlankFragmentDefini" >
+        <action
+            android:id="@+id/action_blankFragmentDefini_to_blankFragmentLogin"
+            app:destination="@id/blankFragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragmentLogin"
+        android:name="com.example.pharmacyapp.BlankFragmentLogin"
+        android:label="fragment_blank_login"
+        tools:layout="@layout/fragment_blank_login" >
+        <action
+            android:id="@+id/action_blankFragmentLogin_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_blankFragmentLogin_to_receptionFragment2"
+            app:destination="@id/receptionFragment" />
+        <action
+            android:id="@+id/action_blankFragmentLogin_to_adminDashboard"
+            app:destination="@id/adminDashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.pharmacyapp.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment_to_blankFragmentLogin"
+            app:destination="@id/blankFragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/receptionFragment"
+        android:name="com.example.pharmacyapp.ReceptionFragment"
+        android:label="fragment_reception_"
+        tools:layout="@layout/fragment_reception_" >
+        <action
+            android:id="@+id/action_receptionFragment_to_medicamentsFragment"
+            app:destination="@id/medicamentsFragment" />
+        <action
+            android:id="@+id/action_receptionFragment_to_articleDetaills2"
+            app:destination="@id/articleDetaills" />
+        <action
+            android:id="@+id/action_receptionFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_receptionFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+
+        <argument
+            android:name="idUser"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_receptionFragment_to_statusFragment"
+            app:destination="@id/statusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/medicamentsFragment"
+        android:name="com.example.pharmacyapp.MedicamentsFragment"
+        android:label="fragment_medicaments"
+        tools:layout="@layout/fragment_medicaments" >
+
+        <argument
+            android:name="idcat"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="idUser"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_medicamentsFragment_to_blankFragmentDetails"
+            app:destination="@id/blankFragmentDetails" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetaills"
+        android:name="com.example.pharmacyapp.ArticleDetaills"
+        android:label="fragment_article_detaills"
+        tools:layout="@layout/fragment_article_detaills" >
+
+        <argument
+            android:name="userconnecte"
+            app:argType="com.example.pharmacyapp.User" />
+        <argument
+            android:name="idArticle"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.pharmacyapp.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+
+        <argument
+            android:name="idUser"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_cartFragment_to_blankFragmentPaiement"
+            app:destination="@id/blankFragmentPaiement" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.example.pharmacyapp.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" >
+
+        <argument
+            android:name="userconnecte"
+            app:argType="com.example.pharmacyapp.User" />
+        <action
+            android:id="@+id/action_profilFragment_to_pharmacyInfo"
+            app:destination="@id/pharmacyInfo" />
+        <action
+            android:id="@+id/action_profilFragment_to_blankFragmentLogin"
+            app:destination="@id/blankFragmentLogin" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragmentDetails"
+        android:name="com.example.pharmacyapp.BlankFragmentDetails"
+        android:label="fragment_blank_details"
+        tools:layout="@layout/fragment_blank_details" >
+
+        <argument
+            android:name="medicament"
+            app:argType="com.example.pharmacyapp.Medicament" />
+
+        <argument
+            android:name="idUser"
+            app:argType="integer"
+            android:defaultValue="0" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/pharmacyInfo"
+        android:name="com.example.pharmacyapp.PharmacyInfo"
+        android:label="fragment_pharmacy_info"
+        tools:layout="@layout/fragment_pharmacy_info" />
+    <fragment
+        android:id="@+id/adminDashboard"
+        android:name="com.example.pharmacyapp.AdminDashboard"
+        android:label="fragment_admin_dashboard"
+        tools:layout="@layout/fragment_admin_dashboard" >
+        <action
+            android:id="@+id/action_adminDashboard_to_adminOrders"
+            app:destination="@id/adminOrders" />
+        <action
+            android:id="@+id/action_adminDashboard_to_adminCategories"
+            app:destination="@id/adminCategories" />
+        <action
+            android:id="@+id/action_adminDashboard_to_adminArticles"
+            app:destination="@id/adminArticles" />
+        <action
+            android:id="@+id/action_adminDashboard_to_adminUsers"
+            app:destination="@id/adminUsers" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminOrders"
+        android:name="com.example.pharmacyapp.AdminOrders"
+        android:label="fragment_admin_orders"
+        tools:layout="@layout/fragment_admin_orders" >
+        <action
+            android:id="@+id/action_adminOrders_to_orderDetails"
+            app:destination="@id/orderDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetails"
+        android:name="com.example.pharmacyapp.OrderDetails"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" >
+
+        <argument
+            android:name="idOrder"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminCategories"
+        android:name="com.example.pharmacyapp.AdminCategories"
+        android:label="fragment_admin_categories"
+        tools:layout="@layout/fragment_admin_categories" >
+        <action
+            android:id="@+id/action_adminCategories_to_adminMedicines"
+            app:destination="@id/adminMedicines" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminMedicines"
+        android:name="com.example.pharmacyapp.AdminMedicines"
+        android:label="fragment_admin_medicines"
+        tools:layout="@layout/fragment_admin_medicines" >
+        <argument
+            android:name="idCat"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminArticles"
+        android:name="com.example.pharmacyapp.AdminArticles"
+        android:label="fragment_admin_articles"
+        tools:layout="@layout/fragment_admin_articles" />
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="com.example.pharmacyapp.StatusFragment"
+        android:label="fragment_status"
+        tools:layout="@layout/fragment_status" >
+
+        <argument
+            android:name="idOrder"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_statusFragment_to_blankFragmentConfirmation"
+            app:destination="@id/blankFragmentConfirmation" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragmentPaiement"
+        android:name="com.example.pharmacyapp.BlankFragmentPaiement"
+        android:label="BlankFragmentPaiement" >
+        <action
+            android:id="@+id/action_blankFragmentPaiement_to_blankFragmentConfirmation"
+            app:destination="@id/blankFragmentConfirmation" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/adminUsers"
+        android:name="com.example.pharmacyapp.AdminUsers"
+        android:label="fragment_admin_users"
+        tools:layout="@layout/fragment_admin_users" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragmentConfirmation"
+        android:name="com.example.pharmacyapp.BlankFragmentConfirmation"
+        android:label="fragment_blank_confirmation"
+        tools:layout="@layout/fragment_blank_confirmation" />
+
+</navigation>

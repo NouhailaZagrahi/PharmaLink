@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/cardImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/card_image"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="30dp" />
+
+
+    <TextView
+        android:id="@+id/textTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="44dp"
+        android:text="Total of the order: 500 MAD"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- RadioButton paiement cash -->
+    <RadioButton
+        android:id="@+id/radioButtonPaiementCash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:checked="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:text="Cash payment"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/montantCommande" />
+
+
+    <!--
+    <Button
+        android:id="@+id/btnFinaliser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@color/teal_700"
+        android:text="Finaliser la commande"
+        app:layout_constraintEnd_toEndOf="@+id/radioButtonPaiementCash"
+        app:layout_constraintStart_toStartOf="@+id/radioButtonPaiementCash"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonPaiementCash" />
+     -->
+    <Button
+        android:id="@+id/btnFinaliser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@color/teal_700"
+        android:text="Finalize the order"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/radioButtonPaiementCash"
+        app:layout_constraintStart_toStartOf="@+id/radioButtonPaiementCash"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonPaiementCash" />
+
+    <TextView
+        android:id="@+id/msgStatut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:text="Statut de la commande: En cours de validation..."
+        app:layout_constraintEnd_toEndOf="@+id/btnFinaliser"
+        app:layout_constraintStart_toStartOf="@+id/btnFinaliser"
+        app:layout_constraintTop_toBottomOf="@+id/btnFinaliser" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/msgStatut"
+        app:layout_constraintStart_toStartOf="@+id/msgStatut"
+        app:layout_constraintTop_toBottomOf="@+id/msgStatut" />
+
+
+</LinearLayout>

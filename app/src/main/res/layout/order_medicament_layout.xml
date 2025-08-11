@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/order_item_bg">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageitem"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        tools:srcCompat="@drawable/doliprane_removebg" />
+
+    <TextView
+        android:id="@+id/nameitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Doliprane"
+        android:textColor="@color/teal_700"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageitem"
+        app:layout_constraintTop_toTopOf="@+id/imageitem" />
+
+    <TextView
+        android:id="@+id/prixitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="20 DH"
+        android:textColor="@color/teal_700"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/nameitem"
+        app:layout_constraintTop_toBottomOf="@+id/nameitem" />
+
+    <TextView
+        android:id="@+id/prix_total_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 DH"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageitem"
+        app:layout_constraintStart_toStartOf="@+id/prixitem" />
+
+    <TextView
+        android:id="@+id/quantityitem"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/comment_bg"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/prix_total_item"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Section pour les vidéos avec fond vert -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/videoPanel"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="#4CAF50"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- ViewPager2 pour défiler entre les vidéos -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/videoViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#257628" />
+
+        <!-- Indicateurs pour les vidéos -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Texte sous le panneau vidéo -->
+
+    <!-- Bouton sous le texte -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="56dp"
+        android:layout_marginTop="148dp"
+        android:gravity="center"
+        android:text="Reserve your medications online from the comfort of your home and enjoy our fast, secure, and convenient service. Take care of your health without leaving your home!"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/videoPanel" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="111dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#4CAF50"
+        android:onClick="click"
+        android:text="Start"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <LinearLayout
+        android:id="@+id/indicatorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/videoPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
